@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # vue-pracitce
-=======
-# 4g_npm
 
 ## Project setup
 ```
