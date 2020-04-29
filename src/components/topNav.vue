@@ -42,12 +42,11 @@ export default {
       var cur_path = this.$route.path // 获取当前路由
       var nav_name = '/content'
       var cur_path_split = '/' + cur_path.split('/')[1] // 匹配根节点路由
-      console.log(cur_path_split)
       nav_name = cur_path_split
 
       this.defaultActiveIndex = cur_path_split
-      this.$store.state.leftNavState = nav_name // 改变leftNavState状态的值
-      console.log(this.$store.state.leftNavState + "asd")
+      this.$store.state.topNavState = nav_name // 改变topNavState状态的值
+      console.log("topNavState:" + this.$store.state.topNavState)
     }
   },
   watch: {

@@ -56,7 +56,7 @@ module.exports = {
         host: 'localhost', //ip地址
         port: 8080, //端口
         https: false, //false关闭https，true为开启
-        open: true, //自动打开浏览器
+        open: false, //自动打开浏览器
         proxy: 'http://localhost:8080',
     },
 

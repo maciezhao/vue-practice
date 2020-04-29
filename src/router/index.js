@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Menu'
-import leftMenu from '@/components/leftNav'
+import topNav from '@/components/topNav'
+import leftNav from '@/components/leftNav'
 
 Vue.use(Router)
 
@@ -16,21 +16,21 @@ export const constantRoutes = [
     path: '/',
     // redirect: '/content',
     redirect: '/content',
-    component: Home
+    component: topNav
   },
   {
     path: '/content',
-    component: Home,
+    component: topNav,
     name: '主页'
   },
   {
     path: '/wan',
-    component: Home,
+    component: topNav,
     redirect: '/wan/mobileconnection',
     children: [
       {
         path: '/wan/mobileconnection',
-        component: leftMenu,
+        component: leftNav,
         name: 'mobileconnection',
         children: [
           {
@@ -47,7 +47,7 @@ export const constantRoutes = [
       },
       {
         path: '/wan/ethernetsettings',
-        component: leftMenu,
+        component: leftNav,
         name: '以太网',
         children: [
           {
@@ -64,7 +64,7 @@ export const constantRoutes = [
       },
       {
         path: '/wan/dualnetlink',
-        component: leftMenu,
+        component: leftNav,
         children: [
           {
             path: '/wan/dualnetlink',
@@ -77,12 +77,12 @@ export const constantRoutes = [
   },
   {
     path: '/wlan',
-    component: Home,
+    component: topNav,
     redirect: '/wlan/wifieasy',
     children: [
       {
         path: '/wlan/wifieasy',
-        component: leftMenu,
+        component: leftNav,
         children: [
           {
             path: '/wlan/wifieasy',
@@ -93,7 +93,7 @@ export const constantRoutes = [
       },
       {
         path: '/wlan/guestwifi',
-        component: leftMenu,
+        component: leftNav,
         children: [
           {
             path: '/wlan/guestwifi',
@@ -106,7 +106,7 @@ export const constantRoutes = [
   },
   {
     path: '/info',
-    component: Home
+    component: topNav
   },
   {
     path: '/401',
