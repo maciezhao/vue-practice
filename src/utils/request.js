@@ -10,7 +10,6 @@ const service = axios.create({
   headers:{
     'Content-Type':'application/x-www-form-urlencoded'
   },
-  timeout: 5000 // request timeout
 })
 
 // request interceptor
@@ -46,7 +45,6 @@ service.interceptors.response.use(
    * You can also judge the status by HTTP Status Code
    */
   response => {
-    console.log("zzzzzzzzzzzzzzzzzzzz")
     const res = response.data
     console.log("zhaomeixia 1", res)
     // if the custom code is not 20000, it is judged as an error.
@@ -55,7 +53,7 @@ service.interceptors.response.use(
       Message({
         message: res.message || 'Error[zhaomeixia]2',
         type: 'error',
-        duration: 5 * 1000
+        duration: 3 * 1000
       })
 
       // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
@@ -81,7 +79,7 @@ service.interceptors.response.use(
     Message({
       message: error.message,
       type: 'error',
-      duration: 5 * 1000
+      duration: 3 * 1000
     })
     return Promise.reject(error)
   }

@@ -7,7 +7,7 @@
         route mode="horizontal"
         @select="handleSelect">
         <!-- 顶部导航 -->
-          <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name" style="width: 25%">
+          <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name" style="width: 20%">
               {{ item.navItem }}
           </el-menu-item>
       </el-menu>
@@ -64,6 +64,7 @@ export default {
     text-align: center;
     line-height: 60px;
     padding: 0!important; /* 顶部导航内边距设为0 */
+    margin:30px;
   }
   
   .el-aside {

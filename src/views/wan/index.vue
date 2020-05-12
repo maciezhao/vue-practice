@@ -96,10 +96,19 @@ export default {
 };
 </script>
 
-<style>
-.el-input {
-  width: 260px;
-  margin:20px;
+<style scoped>
+.el-collapse-item {
+  width:600px;
+  margin:0 auto;
 }
+.el-select {
+  min-width:200px;
+  width: 100%;
+}
+.el-form-item{
+  margin: 30px;
+  width: 360px;
+}
+
 
 </style>

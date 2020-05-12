@@ -16,7 +16,13 @@ export const constantRoutes = [
     path: '/',
     // redirect: '/content',
     redirect: '/content',
-    component: topNav
+    component: topNav,
+    children: [
+      {
+        path: '/content',
+        component: () => import('@/views/content/index'),
+      }
+    ]
   },
   {
     path: '/content',
@@ -98,7 +104,8 @@ export const constantRoutes = [
           {
             path: '/wlan/guestwifi',
             component: () => import('@/views/content/index'),
-            name: 'guestwifi'
+            name: 'guestwifi',
+            meta:{title:" 无线设置"}
           }
         ]
       }

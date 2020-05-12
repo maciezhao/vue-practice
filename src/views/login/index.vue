@@ -109,16 +109,16 @@ export default {
       })
     },
     handleLogin() {
-      const that = this;
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
           this.$store.dispatch('user/login', this.loginForm).then(() => {
             console.log("this.redirect:", this.redirect)
-            that.$router.push({ path: this.redirect || '/' })
-            that.loading = false
-          }).catch(() => {
-            that.loading = false
+            this.$router.push({ path: this.redirect || '/' })
+            this.loading = false
+          }).catch((error) => {
+            this.loading = false
+            console.log(error)
           })
         } else {
           console.log('error submit!!')
